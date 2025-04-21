@@ -1,11 +1,9 @@
-﻿namespace Batch_six.Domain
+﻿using Batch_six.Domain;
+
+namespace Batch_six.DTO
 {
-    
-    public class Appointment: BaseModel
+    public class CreateAppointmentRequestDto
     {
-         
-         
- 
         public required DateTime AppointmentDate { get; set; }
         public required string Reason { get; set; }
         public required string Status { get; set; }
@@ -14,14 +12,5 @@
         public required Doctor Doctor { get; set; }
         public required Prescription Prescription { get; set; }
         public required Billing Billing { get; set; }
-        
-
     }
-
-
-
-
-
-
-
 }

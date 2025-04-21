@@ -1,6 +1,6 @@
-﻿namespace Batch_six.Domain
+﻿namespace Batch_six.DTO
 {
-    public class Doctor : BaseModel
+    public class CreateDoctorRequestDto
     {
         public required string FullName { get; set; }
         public required string Specialty { get; set; }
@@ -8,6 +8,5 @@
         public required string Email { get; set; }
         public required string Qualification { get; set; }
         public required int ExperienceYears { get; set; }
- 
     }
 }

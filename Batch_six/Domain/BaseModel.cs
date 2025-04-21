@@ -2,9 +2,7 @@
 {
     public class BaseModel
     {
-        public required int Id { get; set; }
-        public required string Name { get; set; }
-        public required string DateTime { get; set; }
+        public int Id { get; set; }
         
     }
 }

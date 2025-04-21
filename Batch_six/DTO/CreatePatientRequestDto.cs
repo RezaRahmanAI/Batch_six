@@ -1,7 +1,6 @@
-﻿namespace Batch_six.Domain
+﻿namespace Batch_six.DTO
 {
-    public class Patient: BaseModel
-
+    public class CreatePatientRequestDto
     {
         public required string FullName { get; set; }
         public required DateTime DateOfBirth { get; set; }
@@ -10,11 +9,6 @@
         public required string Address { get; set; }
         public required string BloodGroup { get; set; }
         public required string MedicalHistory { get; set; }
-       
+
     }
-
-
 }
-     
-
-
