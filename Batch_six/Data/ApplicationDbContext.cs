@@ -5,11 +5,14 @@ namespace Batch_six.Data
 {
     public class ApplicationDbContext(DbContextOptions<ApplicationDbContext> option) : DbContext(option)
     {
+        
+
         public DbSet<Admin> Admins { get; set; }
         public DbSet<Class> Classs { get; set; }
+
         public DbSet<Student> Students { get; set; }
         public DbSet<Subject> Subjects { get; set; }
         public DbSet<Teacher> Teachers { get; set; }
-
+        
     }
 }
