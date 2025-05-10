@@ -1,6 +1,7 @@
 ﻿using Batch_six.Data;
 using Batch_six.Domain;
 using Batch_six.DTO;
+using Batch_six.Repositories.Interface;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 
@@ -10,11 +11,11 @@ namespace Batch_six.Controllers
     [ApiController]
     public class AdminsController : ControllerBase
     {
-        private readonly ApplicationDbContext dbContext;
+        private readonly IAdminRepository adminRepository;
 
-        public AdminsController(ApplicationDbContext dbContext)
+        public AdminsController(IAdminRepository adminRepository)
         {
-            this.dbContext = dbContext;
+            this.adminRepository = adminRepository;
         }
 
 
@@ -35,8 +36,9 @@ namespace Batch_six.Controllers
 
             }; 
 
-            await dbContext.Admins.AddAsync(admin);
-            await dbContext.SaveChangesAsync();
+            await adminRepository.CreateAsync(admin);
+
+            
 
             // map model to DTO
             var response = new AdminDto
